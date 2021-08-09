@@ -1,0 +1,16 @@
+{
+  "name": "jenkinsapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "^14.15.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-errors": "^1.7.0"
+  },
+  "devDependencies": {}
+}
