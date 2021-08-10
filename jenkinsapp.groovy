@@ -1,8 +1,8 @@
 job('NodeJS Jenkins example') {
     scm {
         git('git://github.com/Jobsby/jenkinsapp.git') {  node -> // is hudson.plugins.git.GitSCM
-            node / gitConfigName('DSL User')
-            node / gitConfigEmail('jenkins-dsl@newtech.academy')
+            node / gitConfigName('Kyrian')
+            node / gitConfigEmail('akyrian@gmx.net')
         }
     }
     triggers {
@@ -13,12 +13,6 @@ job('NodeJS Jenkins example') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
-        dockerBuildAndPublish {
-            repositoryName('Jobsby/jenkinsapp')
-            forcePull(false)
-            forceTag(false)
-            createFingerprints(false)
-            skipDecorate()
-        }
+        shell("npm install")
     }
 }
