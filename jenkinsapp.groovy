@@ -4,6 +4,9 @@ job('NodeJS Jenkins example') {
             node / gitConfigName('Kyrian')
             node / gitConfigEmail('akyrian@gmx.net')
             branch('main')
+            extensions {
+                localBranch 'main'
+            }
         }
     }
     triggers {
