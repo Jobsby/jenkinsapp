@@ -3,10 +3,6 @@ job('NodeJS Jenkins example') {
         git('git://github.com/Jobsby/jenkinsapp.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('Kyrian')
             node / gitConfigEmail('akyrian@gmx.net')
-            branch('main')
-            extensions {
-                localBranch 'main'
-            }
         }
     }
     triggers {
